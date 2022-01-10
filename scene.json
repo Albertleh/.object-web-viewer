@@ -1,0 +1,58 @@
+{
+	"metadata": {
+		"version": 4.5,
+		"type": "Object",
+		"generator": "Object3D.toJSON"
+	},
+	"geometries": [
+		{
+			"uuid": "F42B0B1D-4740-41C9-B5AB-A62E4192BBC6",
+			"type": "TorusGeometry",
+			"radius": 1,
+			"tube": 0.4,
+			"radialSegments": 20,
+			"tubularSegments": 30,
+			"arc": 6.283185307179586
+		}],
+	"materials": [
+		{
+			"uuid": "43FA9BD4-6496-4FEA-A673-4DCDF42DCADD",
+			"type": "MeshStandardMaterial",
+			"color": 16777215,
+			"roughness": 1,
+			"metalness": 0,
+			"emissive": 0,
+			"envMapIntensity": 1,
+			"refractionRatio": 0.98,
+			"depthFunc": 3,
+			"depthTest": true,
+			"depthWrite": true,
+			"colorWrite": true,
+			"stencilWrite": false,
+			"stencilWriteMask": 255,
+			"stencilFunc": 519,
+			"stencilRef": 0,
+			"stencilFuncMask": 255,
+			"stencilFail": 7680,
+			"stencilZFail": 7680,
+			"stencilZPass": 7680
+		}],
+	"object": {
+		"uuid": "E1F6BF05-4EF5-481D-B5E0-66621FE4116F",
+		"type": "Scene",
+		"name": "Scene",
+		"layers": 1,
+		"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
+		"children": [
+			{
+				"uuid": "14D1309A-6717-4BF3-B030-AB518955B766",
+				"type": "Mesh",
+				"name": "Torus",
+				"castShadow": true,
+				"layers": 1,
+				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,5,2.129,-0.6989767987547033,1],
+				"geometry": "F42B0B1D-4740-41C9-B5AB-A62E4192BBC6",
+				"material": "43FA9BD4-6496-4FEA-A673-4DCDF42DCADD"
+			}]
+	}
+}
