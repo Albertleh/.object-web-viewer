@@ -1,6 +1,9 @@
 // Good resource for editing objects live in threejs:
 // threejs.org/editor/
 
+// Resource for ThreeJS in general:
+// https://github.com/mrdoob/three.js
+
 
 function main(){
     // main scene for the object
@@ -41,9 +44,12 @@ function main(){
     renderer.setClearColor('rgb(60,60,60)');
     document.getElementById('webgl').appendChild(renderer.domElement);
 
+    var controls = new THREE.OrbitControls(camera, renderer.domElement);
+
     console.log(scene);
 
-    update(renderer, scene, camera); 
+    update(renderer, scene, camera, controls); 
+    return scene;
     
 }
 function loadScene(scene){
@@ -88,7 +94,7 @@ function generatePointLight(color, intensity){
 }
 
 
-function update(renderer, scene, camera){
+function update(renderer, scene, camera, controls){
     renderer.render(scene, camera);
 
     var floor = scene.getObjectByName('floor');
@@ -98,11 +104,12 @@ function update(renderer, scene, camera){
         //floor.position.x += 0.01;
     });
 
+    controls.update();
+
     requestAnimationFrame(function() {
-        update(renderer, scene, camera);
+        update(renderer, scene, camera, controls);
     });
 }
-
 
 var scene = main();
 
